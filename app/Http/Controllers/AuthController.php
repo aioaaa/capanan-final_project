@@ -26,7 +26,7 @@ class AuthController extends Controller
 
         //Insert into users table
         User::create([
-            'name' => $request->fullname,
+            'fullname' => $request->fullname,
             'email'=> $request->email,
             'password' => Hash::make($request->password),
             'profile_pic'=> $request->profile_pic
