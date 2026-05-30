@@ -19,6 +19,7 @@ class ToDoController extends Controller
             'category'     => $request->category,
             'stock'        => $request->stock,
             'price'        => $request->price,
+            'task'         => '',
         ]);
 
         return back()->with('success', 'Product added successfully!');
