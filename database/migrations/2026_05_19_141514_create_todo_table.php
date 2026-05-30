@@ -14,7 +14,10 @@ return new class extends Migration
         Schema::create('todo', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('task');
+            $table->string('product_name');
+            $table->string('category');
+            $table->integer('stock');
+            $table->decimal('price', 8, 2);
             $table->timestamps();
             // set it as FK -> id from other table -> from table
             // -> onDelete will delete all records
