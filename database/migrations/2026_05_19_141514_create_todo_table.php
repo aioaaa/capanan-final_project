@@ -17,10 +17,8 @@ return new class extends Migration
             $table->string('product_name');
             $table->string('category');
             $table->integer('stock');
-            $table->decimal('price', 8, 2);
+            $table->string('price');
             $table->timestamps();
-            // set it as FK -> id from other table -> from table
-            // -> onDelete will delete all records
             $table->foreign('user_id')
                 ->references('id')->on('users')->onDelete('cascade');
         });
